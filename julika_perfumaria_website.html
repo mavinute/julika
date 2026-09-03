@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julika Perfumaria | Perfumes Árabes e Importados Exclusivos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        julika: {
+                            gold: '#D4AF37',
+                            darkGold: '#A37F28',
+                            lightGold: '#F8F1E5',
+                            nude: '#F5EBE6',
+                            rose: '#E8B4B8',
+                            warmRose: '#D99B82',
+                            darkText: '#2C221E',
+                            softGray: '#F9F7F5'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #8B6508 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #C59B27 100%);
+        }
+        .bg-soft-rose {
+            background: linear-gradient(180deg, #FAF4F0 0%, #F5EBE6 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+        .perfume-card:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body class="font-sans text-julika-darkText bg-julika-softGray antialiased">
+
+    <!-- Top Announcement Bar -->
+    <!-- <div class="bg-julika-darkText text-julika-lightGold py-2 text-center text-xs tracking-widest uppercase font-medium">
+        ✨ PROMOÇÃO FÉRIAS CHEIROSAS • ATÉ 15% OFF EM PERFUMES SELECIONADOS ✨
+    </div> -->
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-julika-nude transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <svg class="w-10 h-10 text-julika-gold" viewBox="0 0 100 100" fill="currentColor">
+                        <path d="M50 5 C55 25, 75 35, 75 55 C75 75, 60 90, 50 95 C40 90, 25 75, 25 55 C25 35, 45 25, 50 5 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <text x="50" y="65" font-family="Cormorant Garamond" font-size="42" font-weight="bold" text-anchor="middle" fill="#A37F28">J</text>
+                    </svg>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-widest text-julika-darkText leading-none">JULIKA</span>
+                        <span class="text-[9px] tracking-[0.3em] uppercase text-julika-darkGold font-semibold">PERFUMARIA</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide uppercase">
+                    <a href="#destaques" class="hover:text-julika-gold transition-colors">Destaques</a>
+                    <a href="#experiencias" class="hover:text-julika-gold transition-colors">Experiências</a>
+                    <a href="#vitrine" class="hover:text-julika-gold transition-colors">Perfumes</a>
+                    <a href="#localizacao" class="hover:text-julika-gold transition-colors">Loja Física</a>
+                    <a href="#contato" class="hover:text-julika-gold transition-colors">Contato</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="https://wa.me/5586999319044" target="_blank" rel="noopener noreferrer" class="bg-julika-gold hover:bg-julika-darkGold text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 shadow-md flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-sm"></i>
+                        Atendimento
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-julika-darkText p-2 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-julika-nude px-4 pt-2 pb-6 space-y-3">
+            <a href="#destaques" class="block py-2 text-sm font-medium uppercase tracking-wider text-julika-darkText hover:text-julika-gold">Destaques</a>
+            <a href="#experiencias" class="block py-2 text-sm font-medium uppercase tracking-wider text-julika-darkText hover:text-julika-gold">Experiências</a>
+            <a href="#vitrine" class="block py-2 text-sm font-medium uppercase tracking-wider text-julika-darkText hover:text-julika-gold">Perfumes</a>
+            <a href="#localizacao" class="block py-2 text-sm font-medium uppercase tracking-wider text-julika-darkText hover:text-julika-gold">Loja Física</a>
+            <a href="#contato" class="block py-2 text-sm font-medium uppercase tracking-wider text-julika-darkText hover:text-julika-gold">Contato</a>
+            <a href="https://wa.me/551530234166" target="_blank" class="block text-center bg-julika-gold text-white py-3 rounded-md text-xs font-bold uppercase tracking-wider">Falar no WhatsApp</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-soft-rose overflow-hidden py-16 lg:py-24 border-b border-julika-nude">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-julika-rose text-julika-darkGold text-xs font-semibold tracking-widest uppercase">
+                        <i class="fas fa-sparkles text-julika-gold"></i> Coleção Especial de Verão
+                    </div> -->
+                    
+                    <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight text-julika-darkText">
+                        VERÃO <br>
+                        <span class="font-serif italic font-normal gold-gradient-text">cheirosa</span>
+                    </h1>
+                    
+                    <p class="font-serif text-xl sm:text-2xl italic text-julika-warmRose font-medium">
+                        "Leve sua essência por onde for."
+                    </p>
+
+                    <p class="text-base text-gray-700 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Descubra a alta perfumaria árabe e importada. Fragrâncias originais marcantes, com fixação inesquecível e presença única para acompanhar seus melhores momentos.
+                    </p>
+
+                    <!-- Promo Highlight Badge -->
+                    <div class="p-4 rounded-xl bg-white/90 border border-julika-rose/40 inline-block shadow-sm my-2">
+                        <div class="flex items-center justify-center lg:justify-start gap-4">
+                            <span class="text-3xl sm:text-4xl font-extrabold text-julika-warmRose font-serif">ATÉ 15% OFF</span>
+                            <div class="text-left text-xs uppercase tracking-wider text-gray-600 font-medium">
+                                em perfumes selecionados<br>
+                                <span class="text-julika-darkGold font-bold">Por tempo limitado!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="https://wa.me/5586999319044" target="_blank" rel="noopener noreferrer" class="bg-julika-darkText hover:bg-julika-gold text-white px-8 py-4 rounded-full font-medium text-xs tracking-widest uppercase transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+                            <i class="fab fa-whatsapp text-lg text-green-400"></i>
+                            Garantir Meu Perfume
+                        </a>
+                        <a href="#vitrine" class="bg-white hover:bg-julika-lightGold border border-julika-gold text-julika-darkText px-8 py-4 rounded-full font-medium text-xs tracking-widest uppercase transition-all flex items-center justify-center">
+                            Ver Catalogação
+                        </a>
+                    </div>
+
+                    <!-- Value Props List -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 text-center border-t border-julika-rose/30 text-xs font-semibold uppercase tracking-wider text-gray-600">
+                        <div class="space-y-1">
+                            <i class="fas fa-gem text-julika-gold text-base block"></i>
+                            <span>Originalidade Garantida</span>
+                        </div>
+                        <div class="space-y-1">
+                            <i class="fas fa-gift text-julika-gold text-base block"></i>
+                            <span>Ideal para Presentear</span>
+                        </div>
+                        <div class="space-y-1">
+                            <i class="fas fa-spray-can text-julika-gold text-base block"></i>
+                            <span>Alta Fixação</span>
+                        </div>
+                        <div class="space-y-1">
+                            <i class="fas fa-heart text-julika-gold text-base block"></i>
+                            <span>Sua Marca Pessoal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Banner Area -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md bg-white p-6 sm:p-8 rounded-3xl shadow-2xl border border-julika-rose/30 text-center">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-julika-darkGold text-white text-[10px] font-bold uppercase tracking-widest py-1.5 px-6 rounded-full shadow">
+                            Coleção Especial
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-julika-darkText mt-2">Destaques da Estação</h3>
+                        <p class="text-xs text-gray-500 mb-6 uppercase tracking-wider">Perfumes Árabes mais desejados</p>
+
+                        <!-- Product Showcase Mock Grid inside Banner -->
+                        <div class="grid grid-cols-2 gap-4 my-4">
+                            <div class="p-3 rounded-2xl bg-julika-softGray border border-julika-nude text-center">
+                                <div class="h-28 flex items-center justify-center mb-2">
+                                    <i class="fas fa-wine-bottle text-5xl text-julika-warmRose/70"></i>
+                                </div>
+                                <h4 class="font-bold text-xs">Yara Moi</h4>
+                                <span class="text-[10px] text-gray-500 block">Lattafa</span>
+                            </div>
+                            <div class="p-3 rounded-2xl bg-julika-softGray border border-julika-nude text-center">
+                                <div class="h-28 flex items-center justify-center mb-2">
+                                    <i class="fas fa-wine-bottle text-5xl text-purple-400/70"></i>
+                                </div>
+                                <h4 class="font-bold text-xs">Sabah Delilah</h4>
+                                <span class="text-[10px] text-gray-500 block">Al Wataniah</span>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-julika-lightGold/60 border border-julika-gold/30 mt-4 text-xs text-julika-darkText font-medium">
+                            <i class="fas fa-clock text-julika-gold mr-1"></i> Promoção válida por tempo limitado!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Customer Testimonials Section -->
+    <section id="experiencias" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-julika-darkGold text-xs font-bold uppercase tracking-widest block mb-2">Experiências Reais</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-julika-darkText">O que nossas clientes sentem ao vestir Julika</h2>
+                <div class="w-16 h-0.5 bg-julika-gold mx-auto mt-4"></div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="p-8 rounded-2xl bg-julika-softGray border border-julika-nude card-shadow flex flex-col justify-between relative">
+                    <div class="text-julika-gold text-sm mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-serif italic text-lg text-gray-700 leading-relaxed mb-6">
+                        "Comprei o Sabah Delilah para uma viagem de férias e me apaixonei! Onde eu chegava as pessoas perguntavam qual perfume eu estava usando. É uma experiência olfativa única e inesquecível."
+                    </p>
+                    <div class="flex items-center gap-3 border-t border-julika-nude pt-4">
+                        <div class="w-10 h-10 rounded-full bg-julika-rose/30 flex items-center justify-center font-bold text-julika-darkGold">
+                            MC
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-julika-darkText">Mariana C.</h4>
+                            <span class="text-xs text-gray-500">Cliente Verificada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="p-8 rounded-2xl bg-julika-softGray border border-julika-nude card-shadow flex flex-col justify-between relative">
+                    <div class="text-julika-gold text-sm mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-serif italic text-lg text-gray-700 leading-relaxed mb-6">
+                        "O atendimento da Julika é impecável! Me ajudaram a escolher a fragrância perfeita para dar de presente. A embalagem é um luxo absoluto e os perfumes são 100% originais."
+                    </p>
+                    <div class="flex items-center gap-3 border-t border-julika-nude pt-4">
+                        <div class="w-10 h-10 rounded-full bg-julika-rose/30 flex items-center justify-center font-bold text-julika-darkGold">
+                            FB
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-julika-darkText">Fernanda B.</h4>
+                            <span class="text-xs text-gray-500">Cliente Verificada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="p-8 rounded-2xl bg-julika-softGray border border-julika-nude card-shadow flex flex-col justify-between relative">
+                    <div class="text-julika-gold text-sm mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-serif italic text-lg text-gray-700 leading-relaxed mb-6">
+                        "O Asad Elixir tem uma fixação absurda na pele. Passo de manhã e à noite ainda sinto a fragrância marcante. Virou meu perfume assinatura!"
+                    </p>
+                    <div class="flex items-center gap-3 border-t border-julika-nude pt-4">
+                        <div class="w-10 h-10 rounded-full bg-julika-rose/30 flex items-center justify-center font-bold text-julika-darkGold">
+                            RL
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-julika-darkText">Ricardo L.</h4>
+                            <span class="text-xs text-gray-500">Cliente Verificado</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Vitrine de Perfumes Selecionados -->
+    <section id="vitrine" class="py-20 bg-julika-softGray border-t border-b border-julika-nude">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-julika-darkGold text-xs font-bold uppercase tracking-widest block mb-2">Curadoria Exclusiva</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-julika-darkText">Perfumes em Destaque</h2>
+                <p class="text-sm text-gray-600 mt-2">Fragrâncias selecionadas com até 15% OFF por tempo limitado</p>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Product 1: Yara Moi -->
+                <div class="bg-white rounded-2xl p-6 border border-julika-nude perfume-card transition-all duration-300 card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="bg-julika-softGray rounded-xl p-8 mb-4 flex items-center justify-center relative">
+                            <span class="absolute top-3 left-3 bg-julika-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">15% OFF</span>
+                            <!-- Placeholder Bottle Art -->
+                            <div class="w-24 h-36 border-2 border-julika-gold/40 rounded-xl bg-white flex flex-col items-center justify-between p-2 shadow-sm">
+                                <div class="w-8 h-4 bg-julika-gold rounded-xs"></div>
+                                <span class="font-serif text-[11px] font-bold text-center">YARA MOI</span>
+                                <div class="w-full h-1 bg-julika-gold"></div>
+                            </div>
+                        </div>
+                        <span class="text-[10px] uppercase font-semibold text-julika-darkGold tracking-wider">Lattafa</span>
+                        <h3 class="font-serif text-xl font-bold text-julika-darkText">Yara Moi</h3>
+                        <p class="text-xs text-gray-500 mt-1 line-clamp-2">Notas doces de pêssego, caramelo e âmbar. Fragrância envolvente e inesquecível.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-julika-nude flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 line-through">R$ 380,00</span>
+                            <div class="font-bold text-base text-julika-darkText">R$ 323,00</div>
+                        </div>
+                        <a href="https://wa.me/5586999319044 target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-white p-3 rounded-full transition-colors" title="Comprar no WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2: Sabah Delilah -->
+                <div class="bg-white rounded-2xl p-6 border border-julika-nude perfume-card transition-all duration-300 card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="bg-julika-softGray rounded-xl p-8 mb-4 flex items-center justify-center relative">
+                            <span class="absolute top-3 left-3 bg-julika-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">10% OFF</span>
+                            <!-- Placeholder Bottle Art -->
+                            <div class="w-24 h-36 border-2 border-purple-300 rounded-xl bg-purple-50 flex flex-col items-center justify-between p-2 shadow-sm">
+                                <div class="w-6 h-6 bg-purple-400 rounded-full"></div>
+                                <span class="font-serif text-[10px] font-bold text-center text-purple-900">SABAH DELILAH</span>
+                                <div class="w-full h-1 bg-purple-400"></div>
+                            </div>
+                        </div>
+                        <span class="text-[10px] uppercase font-semibold text-julika-darkGold tracking-wider">Al Wataniah</span>
+                        <h3 class="font-serif text-xl font-bold text-julika-darkText">Sabah Delilah</h3>
+                        <p class="text-xs text-gray-500 mt-1 line-clamp-2">Floral sofisticado com toque de baunilha e almíscar. Perfeito para marcar presença.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-julika-nude flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 line-through">R$ 390,00</span>
+                            <div class="font-bold text-base text-julika-darkText">R$ 351,00</div>
+                        </div>
+                        <a href="https://wa.me/5586999319044" target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-white p-3 rounded-full transition-colors" title="Comprar no WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3: Asad Elixir -->
+                <div class="bg-white rounded-2xl p-6 border border-julika-nude perfume-card transition-all duration-300 card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="bg-julika-softGray rounded-xl p-8 mb-4 flex items-center justify-center relative">
+                            <span class="absolute top-3 left-3 bg-julika-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">15% OFF</span>
+                            <!-- Placeholder Bottle Art -->
+                            <div class="w-24 h-36 border-2 border-gray-800 rounded-xl bg-gray-900 text-white flex flex-col items-center justify-between p-2 shadow-sm">
+                                <div class="w-8 h-4 bg-julika-gold rounded-xs"></div>
+                                <span class="font-serif text-[10px] font-bold text-center">ASAD ELIXIR</span>
+                                <div class="w-full h-1 bg-julika-gold"></div>
+                            </div>
+                        </div>
+                        <span class="text-[10px] uppercase font-semibold text-julika-darkGold tracking-wider">Lattafa</span>
+                        <h3 class="font-serif text-xl font-bold text-julika-darkText">Asad Elixir</h3>
+                        <p class="text-xs text-gray-500 mt-1 line-clamp-2">Fragrância masculina intensa, especiada e amadeirada de altíssima fixação.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-julika-nude flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 line-through">R$ 360,00</span>
+                            <div class="font-bold text-base text-julika-darkText">R$ 306,00</div>
+                        </div>
+                        <a href="https://wa.me/5586999319044" target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-white p-3 rounded-full transition-colors" title="Comprar no WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 4: Odyssey Mandarin Sky -->
+                <div class="bg-white rounded-2xl p-6 border border-julika-nude perfume-card transition-all duration-300 card-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="bg-julika-softGray rounded-xl p-8 mb-4 flex items-center justify-center relative">
+                            <span class="absolute top-3 left-3 bg-julika-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">10% OFF</span>
+                            <!-- Placeholder Bottle Art -->
+                            <div class="w-24 h-36 border-2 border-amber-400 rounded-xl bg-amber-100 flex flex-col items-center justify-between p-2 shadow-sm">
+                                <div class="w-6 h-6 bg-amber-500 rounded-md"></div>
+                                <span class="font-serif text-[9px] font-bold text-center text-amber-900">ODYSSEY MANDARIN</span>
+                                <div class="w-full h-1 bg-amber-500"></div>
+                            </div>
+                        </div>
+                        <span class="text-[10px] uppercase font-semibold text-julika-darkGold tracking-wider">Armaf</span>
+                        <h3 class="font-serif text-xl font-bold text-julika-darkText">Odyssey Mandarin Sky</h3>
+                        <p class="text-xs text-gray-500 mt-1 line-clamp-2">Notas cítricas e ambaradas vibrantes. Perfeito para o clima tropical.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-julika-nude flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 line-through">R$ 410,00</span>
+                            <div class="font-bold text-base text-julika-darkText">R$ 369,00</div>
+                        </div>
+                        <a href="https://wa.me/551530234166?text=Gostaria%20de%20comprar%20o%20Odyssey%20Mandarin%20Sky" target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-white p-3 rounded-full transition-colors" title="Comprar no WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Custom Perfume Order Callout -->
+            <div class="mt-16 text-center bg-white p-8 rounded-2xl border border-julika-rose/30 max-w-3xl mx-auto card-shadow">
+                <h3 class="font-serif text-2xl font-bold text-julika-darkText mb-2">Procurando outro perfume específico?</h3>
+                <p class="text-sm text-gray-600 mb-6">Trabalhamos com diversas fragrâncias importadas e árabes originais.</p>
+                <a href="https://wa.me/5586999319044" target="_blank" class="inline-flex items-center gap-2 bg-julika-darkText hover:bg-julika-gold text-white px-6 py-3 rounded-full text-xs font-semibold tracking-widest uppercase transition-all">
+                    <i class="fab fa-whatsapp"></i> Consultar Disponibilidade
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Store Info Section -->
+    <section id="localizacao" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Store Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-julika-darkGold text-xs font-bold uppercase tracking-widest block">Venha nos Visitar</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-julika-darkText">Nossa Loja Física</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Experimente nossas fragrâncias pessoalmente. Contamos com atendimento consultivo exclusivo para ajudar você a encontrar o perfume perfeito.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-julika-lightGold flex items-center justify-center text-julika-darkGold shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-julika-darkText">Endereço</h4>
+                                <p class="text-xs text-gray-600">R. Cmte. Arêa Leão - São Cristovão<br>Teresina - PI, 64055-010</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-julika-lightGold flex items-center justify-center text-julika-darkGold shrink-0">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-julika-darkText">Horário de Funcionamento</h4>
+                                <p class="text-xs text-gray-600">Segunda a Sexta: 09:00 às 18:00</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-julika-lightGold flex items-center justify-center text-julika-darkGold shrink-0">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-julika-darkText">Telefone / WhatsApp</h4>
+                                <p class="text-xs text-gray-600">(86) 99931-9044</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        
+                        <a href="https://maps.app.goo.gl/1DQdd6Db6FAdoJNA8" target="_blank" class="inline-flex items-center gap-2 bg-julika-softGray hover:bg-julika-lightGold border border-julika-gold/50 text-julika-darkText px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all">
+                            <i class="fas fa-directions text-julika-gold"></i> Abrir no Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="lg:col-span-7 h-[400px] rounded-2xl overflow-hidden border border-julika-nude shadow-lg">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1987.078574631063!2d-42.773322593253475!3d-5.078264884958446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e3a171dc559d5%3A0x22ef6e7f46c048b3!2sR.%20Prof.%20Clemente%20Fortes%2C%20999%20-%20S%C3%A3o%20Crist%C3%B3v%C3%A3o%2C%20Teresina%20-%20PI%2C%2064051-030!5e0!3m2!1spt-BR!2sbr!4v1788273701298!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Social Bar -->
+    <section id="contato" class="py-16 bg-julika-softGray border-t border-julika-nude">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-serif text-3xl font-bold text-julika-darkText mb-4">Acompanhe a Julika Perfumaria</h2>
+            <p class="text-sm text-gray-600 max-w-md mx-auto mb-8">Fique por dentro das novidades, lançamentos de perfumes árabes e promoções exclusivas no nosso Instagram.</p>
+
+            <div class="flex justify-center items-center gap-6">
+                <a href="https://www.instagram.com/boutiquejulika" target="_blank" class="flex items-center gap-2 bg-white hover:bg-julika-lightGold border border-julika-rose/50 text-julika-darkText px-6 py-3 rounded-full font-semibold text-xs tracking-wider uppercase shadow-sm transition-all">
+                    <i class="fab fa-instagram text-xl text-pink-600"></i> @boutiquejulika
+                </a>
+                <a href="https://wa.me/5586999319044" target="_blank" class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold text-xs tracking-wider uppercase shadow-sm transition-all">
+                    <i class="fab fa-whatsapp text-xl"></i> Fale Comigo!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-julika-darkText text-julika-lightGold py-12 border-t border-julika-darkGold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-widest text-julika-gold">JULIKA</span>
+                    <p class="text-xs text-gray-400 mt-1">Perfumes que transformam momentos em memórias.</p>
+                </div>
+                <div class="text-xs text-gray-400 space-y-1">
+                    <p>© 2026 Julika Perfumaria. Todos os direitos reservados.</p>
+                    <p>R. Comt. Area Leão - São Cristovão, Teresina - PI</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5586999319044" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center transition-all duration-300 hover:scale-110" title="Atendimento via WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const btn = id => document.getElementById(id);
+        const mobileMenuBtn = btn('mobile-menu-btn');
+        const mobileMenu = btn('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
