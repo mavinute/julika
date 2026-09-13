@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleção Exclusiva | Julika Perfumaria</title>
+    <meta name="description" content="16 perfumes selecionados em edição exclusiva. Estoque limitado, peça pelo WhatsApp.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        julika: {
+                            gold: '#D4AF37',
+                            darkGold: '#A37F28',
+                            lightGold: '#F8F1E5',
+                            nude: '#F5EBE6',
+                            rose: '#E8B4B8',
+                            warmRose: '#D99B82',
+                            darkText: '#2C221E',
+                            softGray: '#F9F7F5',
+                            night: '#181210',
+                            night2: '#241B17'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #8B6508 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .night-gradient {
+            background: radial-gradient(circle at 50% 0%, #2A201B 0%, #181210 65%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.10), 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+        .perfume-card:hover {
+            transform: translateY(-6px);
+        }
+        .reserved-card {
+            background-image: repeating-linear-gradient(135deg, rgba(212,175,55,0.06) 0px, rgba(212,175,55,0.06) 2px, transparent 2px, transparent 10px);
+        }
+        .number-tag {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="font-sans text-julika-darkText bg-julika-softGray antialiased">
+
+    <!-- Header -->
+    <header class="bg-julika-night text-julika-lightGold sticky top-0 z-40 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="img/Julika-logo-transparent.png" alt="Julika Perfumaria" class="h-10 w-auto">
+                <div class="flex flex-col leading-none">
+                    <span class="font-serif text-xl font-bold tracking-widest text-white">JULIKA</span>
+                    <span class="text-[8px] tracking-[0.3em] uppercase text-julika-gold font-semibold">PERFUMARIA</span>
+                </div>
+            </a>
+            <a href="index.html" class="hidden sm:flex items-center gap-2 text-xs uppercase tracking-widest text-julika-lightGold/70 hover:text-julika-gold transition-colors">
+                <i class="fas fa-arrow-left text-[10px]"></i> Voltar ao site
+            </a>
+            <a href="https://wa.me/5586999319044?text=Olá%20vim%20da%20Coleção%20Exclusiva%20Julika.%20Quero%20saber%20mais." target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-julika-night font-semibold p-3 sm:px-5 sm:py-2.5 rounded-full text-xs uppercase tracking-wider transition-colors flex items-center gap-2">
+                <i class="fab fa-whatsapp text-base"></i> <span class="hidden sm:inline">Falar no WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="night-gradient text-white py-16 md:py-20 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="inline-block text-julika-gold text-xs font-semibold tracking-[0.3em] uppercase mb-4 border border-julika-gold/40 rounded-full px-4 py-1.5">Acesso Limitado</span>
+            <h1 class="font-serif text-4xl md:text-6xl font-bold leading-tight mb-4">
+                Coleção Exclusiva <span class="gold-gradient-text">Julika</span>
+            </h1>
+            <p class="text-julika-lightGold/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+                16 perfumes selecionados a dedo, com condições especiais só para esta página. Unidades limitadas — quando esgotar, esgotou.
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-3 text-xs uppercase tracking-wider text-julika-lightGold/70">
+                <span class="flex items-center gap-2"><i class="fas fa-check text-julika-gold"></i> Originais importados</span>
+                <span class="flex items-center gap-2"><i class="fas fa-check text-julika-gold"></i> Envio para todo o Brasil</span>
+                <span class="flex items-center gap-2"><i class="fas fa-check text-julika-gold"></i> Compra direto no WhatsApp</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <main class="max-w-7xl mx-auto px-6 py-14 md:py-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- 01 - Sabah Delilah -->
+            <div class="bg-white rounded-2xl p-5 border border-julika-nude perfume-card transition-all duration-300 card-shadow flex flex-col justify-between relative">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/50 number-tag">01</span>
+                <div>
+                    <div class="bg-julika-softGray rounded-xl p-4 mb-4 flex items-center justify-center relative h-48">
+                        <span class="absolute top-3 left-3 bg-julika-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase z-10">10% OFF</span>
+                        <img src="img/Sabah Delilah.jpeg" alt="Sabah Delilah - Al Wataniah" class="h-full w-auto object-contain mix-blend-multiply">
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold tracking-wider">Al Wataniah</span>
+                    <h3 class="font-serif text-lg font-bold text-julika-darkText leading-tight">Sabah Delilah</h3>
+                </div>
+                <div class="mt-5 pt-4 border-t border-julika-nude flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-gray-400 line-through">R$ 390,00</span>
+                        <div class="font-bold text-base text-julika-darkText">R$ 351,00</div>
+                    </div>
+                    <a href="https://wa.me/5586999319044?text=Vim%20da%20Coleção%20Exclusiva.%20Quero%20o%20Sabah%20Delilah" target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-white p-3 rounded-full transition-colors" title="Comprar no WhatsApp">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 02 - Odyssey Mandarin Sky -->
+            <div class="bg-white rounded-2xl p-5 border border-julika-nude perfume-card transition-all duration-300 card-shadow flex flex-col justify-between relative">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/50 number-tag">02</span>
+                <div>
+                    <div class="bg-julika-softGray rounded-xl p-4 mb-4 flex items-center justify-center relative h-48">
+                        <span class="absolute top-3 left-3 bg-julika-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase z-10">10% OFF</span>
+                        <img src="img/Odyssey Mandarin Sky.jpeg" alt="Odyssey Mandarin Sky - Armaf" class="h-full w-auto object-contain mix-blend-multiply">
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold tracking-wider">Armaf</span>
+                    <h3 class="font-serif text-lg font-bold text-julika-darkText leading-tight">Odyssey Mandarin Sky</h3>
+                </div>
+                <div class="mt-5 pt-4 border-t border-julika-nude flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-gray-400 line-through">R$ 410,00</span>
+                        <div class="font-bold text-base text-julika-darkText">R$ 369,00</div>
+                    </div>
+                    <a href="https://wa.me/5586999319044?text=Vim%20da%20Coleção%20Exclusiva.%20Quero%20o%20Odyssey%20Mandarin%20Sky" target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-white p-3 rounded-full transition-colors" title="Comprar no WhatsApp">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 03 - Jean Lowe Fantasme -->
+            <div class="bg-white rounded-2xl p-5 border border-julika-nude perfume-card transition-all duration-300 card-shadow flex flex-col justify-between relative">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/50 number-tag">03</span>
+                <div>
+                    <div class="bg-julika-softGray rounded-xl p-4 mb-4 flex items-center justify-center relative h-48">
+                        <span class="absolute top-3 left-3 bg-julika-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase z-10">17% OFF</span>
+                        <img src="img/Jean Lowes.jpeg" alt="Jean Lowe Fantasme - Maison Alhambra" class="h-full w-auto object-contain">
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold tracking-wider">Maison Alhambra</span>
+                    <h3 class="font-serif text-lg font-bold text-julika-darkText leading-tight">Jean Lowe Fantasme</h3>
+                </div>
+                <div class="mt-5 pt-4 border-t border-julika-nude flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-gray-400 line-through">R$ 299,00</span>
+                        <div class="font-bold text-base text-julika-darkText">R$ 249,00</div>
+                    </div>
+                    <a href="https://wa.me/5586999319044?text=Vim%20da%20Coleção%20Exclusiva.%20Quero%20o%20Jean%20Lowe%20Fantasme" target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-white p-3 rounded-full transition-colors" title="Comprar no WhatsApp">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 04 - Club de Nuit Maleka -->
+            <div class="bg-white rounded-2xl p-5 border border-julika-nude perfume-card transition-all duration-300 card-shadow flex flex-col justify-between relative">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/50 number-tag">04</span>
+                <div>
+                    <div class="bg-julika-softGray rounded-xl p-4 mb-4 flex items-center justify-center relative h-48">
+                        <span class="absolute top-3 left-3 bg-julika-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase z-10">13% OFF</span>
+                        <img src="img/Club de Nuit Maleca.jpeg" alt="Club de Nuit Maleka - Armaf" class="h-full w-auto object-contain">
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold tracking-wider">Armaf</span>
+                    <h3 class="font-serif text-lg font-bold text-julika-darkText leading-tight">Club de Nuit Maleka</h3>
+                </div>
+                <div class="mt-5 pt-4 border-t border-julika-nude flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-gray-400 line-through">R$ 399,00</span>
+                        <div class="font-bold text-base text-julika-darkText">R$ 349,00</div>
+                    </div>
+                    <a href="https://wa.me/5586999319044?text=Vim%20da%20Coleção%20Exclusiva.%20Quero%20o%20Club%20de%20Nuit%20Maleka" target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-white p-3 rounded-full transition-colors" title="Comprar no WhatsApp">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 05 - Yara Moi (sem foto real ainda) -->
+            <div class="bg-white rounded-2xl p-5 border border-julika-nude perfume-card transition-all duration-300 card-shadow flex flex-col justify-between relative">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/50 number-tag">05</span>
+                <div>
+                    <div class="bg-julika-softGray rounded-xl p-4 mb-4 flex items-center justify-center relative h-48">
+                        <span class="absolute top-3 left-3 bg-julika-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase z-10">15% OFF</span>
+                        <div class="w-20 h-32 border-2 border-julika-gold/40 rounded-xl bg-white flex flex-col items-center justify-between p-2 shadow-sm">
+                            <div class="w-7 h-3.5 bg-julika-gold rounded-sm"></div>
+                            <span class="font-serif text-[10px] font-bold text-center">YARA MOI</span>
+                            <div class="w-full h-1 bg-julika-gold"></div>
+                        </div>
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold tracking-wider">Lattafa</span>
+                    <h3 class="font-serif text-lg font-bold text-julika-darkText leading-tight">Yara Moi</h3>
+                </div>
+                <div class="mt-5 pt-4 border-t border-julika-nude flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-gray-400 line-through">R$ 380,00</span>
+                        <div class="font-bold text-base text-julika-darkText">R$ 323,00</div>
+                    </div>
+                    <a href="https://wa.me/5586999319044?text=Vim%20da%20Coleção%20Exclusiva.%20Quero%20o%20Yara%20Moi" target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-white p-3 rounded-full transition-colors" title="Comprar no WhatsApp">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 06 - Asad Elixir (sem foto real ainda) -->
+            <div class="bg-white rounded-2xl p-5 border border-julika-nude perfume-card transition-all duration-300 card-shadow flex flex-col justify-between relative">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/50 number-tag">06</span>
+                <div>
+                    <div class="bg-julika-softGray rounded-xl p-4 mb-4 flex items-center justify-center relative h-48">
+                        <span class="absolute top-3 left-3 bg-julika-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase z-10">15% OFF</span>
+                        <div class="w-20 h-32 border-2 border-gray-800 rounded-xl bg-gray-900 text-white flex flex-col items-center justify-between p-2 shadow-sm">
+                            <div class="w-7 h-3.5 bg-julika-gold rounded-sm"></div>
+                            <span class="font-serif text-[9px] font-bold text-center">ASAD ELIXIR</span>
+                            <div class="w-full h-1 bg-julika-gold"></div>
+                        </div>
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold tracking-wider">Lattafa</span>
+                    <h3 class="font-serif text-lg font-bold text-julika-darkText leading-tight">Asad Elixir</h3>
+                </div>
+                <div class="mt-5 pt-4 border-t border-julika-nude flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-gray-400 line-through">R$ 360,00</span>
+                        <div class="font-bold text-base text-julika-darkText">R$ 306,00</div>
+                    </div>
+                    <a href="https://wa.me/5586999319044?text=Vim%20da%20Coleção%20Exclusiva.%20Quero%20o%20Asad%20Elixir" target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-white p-3 rounded-full transition-colors" title="Comprar no WhatsApp">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 07 - Mallow Madness -->
+            <div class="bg-white rounded-2xl p-5 border border-julika-nude perfume-card transition-all duration-300 card-shadow flex flex-col justify-between relative">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/50 number-tag">07</span>
+                <div>
+                    <div class="bg-julika-softGray rounded-xl p-4 mb-4 flex items-center justify-center relative h-48">
+                        <span class="absolute top-3 left-3 bg-julika-rose text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase z-10">Novo</span>
+                        <img src="img/Malow Magnes.jpeg" alt="Mallow Madness - Give Me Gourmand - Lattafa" class="h-full w-auto object-contain">
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold tracking-wider">Lattafa</span>
+                    <h3 class="font-serif text-lg font-bold text-julika-darkText leading-tight">Mallow Madness</h3>
+                </div>
+                <div class="mt-5 pt-4 border-t border-julika-nude flex items-center justify-between">
+                    <div>
+                        <div class="font-bold text-sm text-julika-darkGold">Consulte o valor</div>
+                    </div>
+                    <a href="https://wa.me/5586999319044?text=Vim%20da%20Coleção%20Exclusiva.%20Quero%20saber%20o%20valor%20do%20Mallow%20Madness" target="_blank" class="bg-julika-gold hover:bg-julika-darkGold text-white p-3 rounded-full transition-colors" title="Consultar no WhatsApp">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ===================================================================== -->
+            <!-- 08 a 16 — ESPAÇOS RESERVADOS                                           -->
+            <!-- Para ativar um produto: apague o comentário "Reservado" e o comentário -->
+            <!-- de instrução, troque o nome, marca, preço, link da foto e a mensagem   -->
+            <!-- do WhatsApp. Copie o padrão dos cards 01-07 acima se preferir.         -->
+            <!-- ===================================================================== -->
+
+            <!-- 08 - RESERVADO -->
+            <div class="reserved-card rounded-2xl p-5 border-2 border-dashed border-julika-gold/30 flex flex-col justify-between relative min-h-[340px]">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/40 number-tag">08</span>
+                <div class="flex-1 flex flex-col items-center justify-center text-center gap-3 py-6">
+                    <div class="w-12 h-12 rounded-full border-2 border-dashed border-julika-gold/40 flex items-center justify-center">
+                        <i class="fas fa-plus text-julika-gold/50"></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold/60 tracking-wider">Em breve</span>
+                    <p class="font-serif text-base text-julika-darkText/50 leading-tight">Produto reservado<br>para a coleção</p>
+                </div>
+            </div>
+
+            <!-- 09 - RESERVADO -->
+            <div class="reserved-card rounded-2xl p-5 border-2 border-dashed border-julika-gold/30 flex flex-col justify-between relative min-h-[340px]">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/40 number-tag">09</span>
+                <div class="flex-1 flex flex-col items-center justify-center text-center gap-3 py-6">
+                    <div class="w-12 h-12 rounded-full border-2 border-dashed border-julika-gold/40 flex items-center justify-center">
+                        <i class="fas fa-plus text-julika-gold/50"></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold/60 tracking-wider">Em breve</span>
+                    <p class="font-serif text-base text-julika-darkText/50 leading-tight">Produto reservado<br>para a coleção</p>
+                </div>
+            </div>
+
+            <!-- 10 - RESERVADO -->
+            <div class="reserved-card rounded-2xl p-5 border-2 border-dashed border-julika-gold/30 flex flex-col justify-between relative min-h-[340px]">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/40 number-tag">10</span>
+                <div class="flex-1 flex flex-col items-center justify-center text-center gap-3 py-6">
+                    <div class="w-12 h-12 rounded-full border-2 border-dashed border-julika-gold/40 flex items-center justify-center">
+                        <i class="fas fa-plus text-julika-gold/50"></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold/60 tracking-wider">Em breve</span>
+                    <p class="font-serif text-base text-julika-darkText/50 leading-tight">Produto reservado<br>para a coleção</p>
+                </div>
+            </div>
+
+            <!-- 11 - RESERVADO -->
+            <div class="reserved-card rounded-2xl p-5 border-2 border-dashed border-julika-gold/30 flex flex-col justify-between relative min-h-[340px]">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/40 number-tag">11</span>
+                <div class="flex-1 flex flex-col items-center justify-center text-center gap-3 py-6">
+                    <div class="w-12 h-12 rounded-full border-2 border-dashed border-julika-gold/40 flex items-center justify-center">
+                        <i class="fas fa-plus text-julika-gold/50"></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold/60 tracking-wider">Em breve</span>
+                    <p class="font-serif text-base text-julika-darkText/50 leading-tight">Produto reservado<br>para a coleção</p>
+                </div>
+            </div>
+
+            <!-- 12 - RESERVADO -->
+            <div class="reserved-card rounded-2xl p-5 border-2 border-dashed border-julika-gold/30 flex flex-col justify-between relative min-h-[340px]">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/40 number-tag">12</span>
+                <div class="flex-1 flex flex-col items-center justify-center text-center gap-3 py-6">
+                    <div class="w-12 h-12 rounded-full border-2 border-dashed border-julika-gold/40 flex items-center justify-center">
+                        <i class="fas fa-plus text-julika-gold/50"></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold/60 tracking-wider">Em breve</span>
+                    <p class="font-serif text-base text-julika-darkText/50 leading-tight">Produto reservado<br>para a coleção</p>
+                </div>
+            </div>
+
+            <!-- 13 - RESERVADO -->
+            <div class="reserved-card rounded-2xl p-5 border-2 border-dashed border-julika-gold/30 flex flex-col justify-between relative min-h-[340px]">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/40 number-tag">13</span>
+                <div class="flex-1 flex flex-col items-center justify-center text-center gap-3 py-6">
+                    <div class="w-12 h-12 rounded-full border-2 border-dashed border-julika-gold/40 flex items-center justify-center">
+                        <i class="fas fa-plus text-julika-gold/50"></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold/60 tracking-wider">Em breve</span>
+                    <p class="font-serif text-base text-julika-darkText/50 leading-tight">Produto reservado<br>para a coleção</p>
+                </div>
+            </div>
+
+            <!-- 14 - RESERVADO -->
+            <div class="reserved-card rounded-2xl p-5 border-2 border-dashed border-julika-gold/30 flex flex-col justify-between relative min-h-[340px]">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/40 number-tag">14</span>
+                <div class="flex-1 flex flex-col items-center justify-center text-center gap-3 py-6">
+                    <div class="w-12 h-12 rounded-full border-2 border-dashed border-julika-gold/40 flex items-center justify-center">
+                        <i class="fas fa-plus text-julika-gold/50"></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold/60 tracking-wider">Em breve</span>
+                    <p class="font-serif text-base text-julika-darkText/50 leading-tight">Produto reservado<br>para a coleção</p>
+                </div>
+            </div>
+
+            <!-- 15 - RESERVADO -->
+            <div class="reserved-card rounded-2xl p-5 border-2 border-dashed border-julika-gold/30 flex flex-col justify-between relative min-h-[340px]">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/40 number-tag">15</span>
+                <div class="flex-1 flex flex-col items-center justify-center text-center gap-3 py-6">
+                    <div class="w-12 h-12 rounded-full border-2 border-dashed border-julika-gold/40 flex items-center justify-center">
+                        <i class="fas fa-plus text-julika-gold/50"></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold/60 tracking-wider">Em breve</span>
+                    <p class="font-serif text-base text-julika-darkText/50 leading-tight">Produto reservado<br>para a coleção</p>
+                </div>
+            </div>
+
+            <!-- 16 - RESERVADO -->
+            <div class="reserved-card rounded-2xl p-5 border-2 border-dashed border-julika-gold/30 flex flex-col justify-between relative min-h-[340px]">
+                <span class="absolute top-4 right-4 text-[10px] font-bold text-julika-gold/40 number-tag">16</span>
+                <div class="flex-1 flex flex-col items-center justify-center text-center gap-3 py-6">
+                    <div class="w-12 h-12 rounded-full border-2 border-dashed border-julika-gold/40 flex items-center justify-center">
+                        <i class="fas fa-plus text-julika-gold/50"></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-semibold text-julika-darkGold/60 tracking-wider">Em breve</span>
+                    <p class="font-serif text-base text-julika-darkText/50 leading-tight">Produto reservado<br>para a coleção</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Progress note -->
+        <p class="text-center text-xs text-julika-darkText/40 mt-10 tracking-wide">
+            7 de 16 produtos publicados · 9 vagas reservadas para novos lançamentos
+        </p>
+    </main>
+
+    <!-- Bottom CTA -->
+    <section class="night-gradient text-white py-14 px-6 text-center">
+        <h2 class="font-serif text-2xl md:text-3xl font-bold mb-3">Não achou o que procurava?</h2>
+        <p class="text-julika-lightGold/70 text-sm mb-6 max-w-md mx-auto">Fazemos encomenda de perfumes sob consulta. Manda o nome pra gente no WhatsApp.</p>
+        <a href="https://wa.me/5586999319044?text=Olá%20vim%20da%20Coleção%20Exclusiva.%20Quero%20consultar%20um%20perfume." target="_blank" class="inline-flex items-center gap-2 bg-julika-gold hover:bg-julika-darkGold text-julika-night px-8 py-4 rounded-full font-semibold text-xs tracking-widest uppercase transition-all">
+            <i class="fab fa-whatsapp"></i> Consultar no WhatsApp
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-julika-night text-julika-lightGold/60 py-8 px-6 text-center text-xs">
+        <p>&copy; 2026 Julika Perfumaria. Coleção Exclusiva — todos os direitos reservados.</p>
+        <a href="index.html" class="text-julika-gold hover:underline mt-2 inline-block">Voltar ao site principal</a>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5586999319044" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center transition-all duration-300 hover:scale-110" title="Atendimento via WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+</body>
+</html>
